@@ -74,10 +74,13 @@ body, html {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     form {
         width: 100%;
         min-height: 0%; 
+    }
+    body, html {
+        background-size: 200% 140%;
     }
 }
 
