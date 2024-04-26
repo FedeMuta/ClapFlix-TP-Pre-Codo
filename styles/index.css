@@ -160,6 +160,8 @@ header{
                 }
                 .BtnBuscarNav{
                     font-size: 0.8rem;
+                    padding: 0 10px;
+                    height: 1.5rem;
                 }
             }
             ul{
@@ -215,6 +217,7 @@ header{
         right: 10px;
     }   
 }
+
 
 .novedades {
     text-align: center;
