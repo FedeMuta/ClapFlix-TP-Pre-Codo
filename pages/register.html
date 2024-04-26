@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClapFlix</title>
+    <link rel="icon" href="../assets/favicono.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicono.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+    <div class="page-container">
+        <a href="../index.html" style="text-decoration:none;">
+            <h1 class="page-title">🎬ClapFlix</h1>
+        </a>
+        <div class="login-form-container">
+            <form action="#" method="POST">
+                <h2>Regístrate</h2>
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre de Usuario" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Contraseña" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirmar Contraseña" id="confirm-password" name="confirm-password" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <select id="country" name="country" required>
+                        <option value="">Seleccione un país</option>
+                        <option value="usa">Argentina</option>
+                        <option value="mexico">Perú</option>
+                        <option value="spain">Bolivia</option>
+                        <option value="argentina">Brazil</option>
+                    </select>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

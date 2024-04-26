@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClapFlix</title>
+    <link rel="icon" href="./assets/favicono.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicono.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">
+                <h1 class="page-title">🎬ClapFlix</h1>
+            </a>
+                <form class="formBuscadorNav">
+                    <input class="inputNav" type="text" placeholder="¿Qué quieres ver?" id="buscar" name="buscar">
+                    <input class="BtnBuscarNav" type="submit" value="Buscar">
+                </form>
+            <ul>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="./pages/register.html">Registrarse</a></li>
+                <li><a class="login" href="./pages/login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner-principal">
+            <div class="carrusel">
+              <div class="imagenes">
+                <img src="assets/banner1.png" alt="Banner del Estreno Destacado">
+                <img src="assets/banner.png" alt="Banner del Estreno Destacado">
+                <img src="assets/banner3.png" alt="Banner del Estreno Destacado">
+                <img src="assets/banner4.png" alt="Banner del Estreno Destacado">
+                <img src="assets/banner2.png" alt="Banner del Estreno Destacado">
+              </div>
+              <button class="prev">◀</button>
+              <button class="next">▶</button>
+            </div>
+          </section>
+        <section id="novedades" data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000" class="novedades">
+            <h2>Novedades</h2>
+            <div class="peliculas">
+            <div class="pelicula">
+                <img src="assets/movie1.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+            <div class="pelicula">
+                <img src="assets/movie2.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+            <div class="pelicula">
+                <img src="assets/movie3.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+            <div class="pelicula">
+                <img src="assets/movie4.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+            <div class="pelicula">
+                <img src="assets/movie5.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+            <div class="pelicula">
+                <img src="assets/movie6.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+            <div class="pelicula">
+                <img src="assets/movie7.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+            <div class="pelicula">
+                <img src="assets/movie8.png" alt="Película 1">
+                <p>Nombre de Película</p>
+            </div>
+        </div>
+        </section>
+        <hr>
+        <section data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000" class="peliculasAclamadas">
+            <h2>Películas Aclamadas</h2>
+            <div class="aclamadas">
+                <div class="pelicula">
+                    <img src="assets/movie1.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+                <div class="pelicula">
+                    <img src="assets/movie2.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+                <div class="pelicula">
+                    <img src="assets/movie3.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+                <div class="pelicula">
+                    <img src="assets/movie4.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+                <div class="pelicula">
+                    <img src="assets/movie5.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+                <div class="pelicula">
+                    <img src="assets/movie6.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+                <div class="pelicula">
+                    <img src="assets/movie7.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+                <div class="pelicula">
+                    <img src="assets/movie8.png" alt="Película 1">
+                    <p>Nombre de Película</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 PopFlix, Inc.</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  var index = 0;
+  var imgs = document.querySelector('.carrusel .imagenes');
+  var totalImages = document.querySelectorAll('.carrusel img').length;
+
+  document.querySelector('.prev').addEventListener('click', function() {
+    index--;
+    if (index < 0) {
+      index = totalImages - 1;
+    }
+    updateCarousel();
+  });
+
+  document.querySelector('.next').addEventListener('click', function() {
+    index++;
+    if (index >= totalImages) {
+      index = 0;
+    }
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    imgs.style.transform = 'translateX(' + (-index * 100) + '%)';
+  }
+});
+    </script>
+</body>
+</html>

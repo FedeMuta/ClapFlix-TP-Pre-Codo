@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: green;
+}
+
+body{
+    background-color: #181419;
+    color:white; 
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+header{
+    background-color:green;
+    color:#ffffff;
+    height: 11vh;
+    position:sticky;
+    top: 0;
+    z-index:100;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left:40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+        a{  
+            font-size: 1.1rem;
+            text-decoration: none;
+            color:#ffffff;
+        }
+        .inputNav{
+            height: 2rem;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: #000000;
+            font-size: 1.1rem;
+            padding: 0px 20px;
+        }
+        .BtnBuscarNav{
+            background-color:rgb(243, 187, 83);
+            height: 2rem;
+            color:#000000;
+            padding:0 20px;
+            border: 2px solid rgb(243, 187, 83);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: transform 0.3s;
+             &:hover {
+                cursor: pointer;
+                transform: scale(0.95);
+             }
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            li{
+                margin-right:20px;
+                a{
+                    text-decoration: none;
+                    color:#ffffff;
+                    font-size: 1rem;
+                    padding: 0.5rem 1rem;
+                    /* Agregar efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+                }
+                .login{
+                    background-color: #181419;
+                    color: white;
+                    
+                    border-radius: 5px;
+                     /* Agregar efecto de botón presionado */
+                     transition: transform 0.3s, box-shadow 0.3s;
+                     &:hover {
+                         background-color: green;
+                        /* transform: scale(0.95);
+                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+                     }
+                }
+            }
+           
+        }
+    }
+   
+}
+
+@media (max-width: 768px) {
+    header{
+        height: initial;
+        nav{
+            margin-left:10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+            form {
+                margin-bottom: 20px;
+            }
+            .ul{
+                padding:initial;
+                li{
+                    a{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                        
+                    }
+                  
+                }
+            }
+        }
+    }
+}
+
+.carrusel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    .imagenes {
+        display: flex;
+        transition: transform 0.5s ease;
+        img {
+            width: 100%;
+            height: 89vh;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+    }
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 10;
+    }
+    .prev {
+        width: 10vh;
+        height: 10vh;
+        font-size: larger;
+        border-radius: 50%;
+        left: 10px;
+    }
+    .next {
+        width: 10vh;
+        height: 10vh;
+        font-size: larger;
+        border-radius: 50%;
+        right: 10px;
+    }   
+}
+
+.novedades {
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 80%;
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .peliculas {
+        padding: 20px;
+        .pelicula {
+            border-radius: 5%;
+            cursor: pointer;
+            margin: 40px 20px 20px 0;
+            display: inline-block;
+            width: 200px;
+            margin-right: 15px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                aspect-ratio: 2/3;
+            }
+            p {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.5s ease, visibility 0s 0.5s;
+                visibility: hidden;
+            }
+            &:hover img {
+                filter: blur(5px);
+            }
+            &:hover p {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.5s ease;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.peliculasAclamadas{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:60px;
+    h2{
+        margin-top: 50px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+    .aclamadas{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px 0px 40px 0px;
+        .pelicula{
+            cursor: pointer;
+            border-radius: 25px;
+            width: 170px;
+            min-width: 170px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img{
+                border-radius: 5%;
+                width: 95%;
+                height: 95%;
+                object-fit: cover;
+                &:hover{
+                    box-shadow: 0 0 30px #014101cd;
+                    transform: scale(0.9);
+                }
+            }   
+        }
+    }
+}
+
+footer {
+    background-color: green;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+hr {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #333;
+}
