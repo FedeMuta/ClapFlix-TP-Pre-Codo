@@ -75,7 +75,6 @@ header{
                     color:#ffffff;
                     font-size: 1rem;
                     padding: 0.5rem 1rem;
-                    /* Agregar efecto de botón presionado */
                     transition: transform 0.3s, box-shadow 0.3s;
                     &:hover {
                         transform: scale(0.95);
@@ -86,21 +85,15 @@ header{
                 .login{
                     background-color: #181419;
                     color: white;
-                    
                     border-radius: 5px;
-                     /* Agregar efecto de botón presionado */
-                     transition: transform 0.3s, box-shadow 0.3s;
-                     &:hover {
-                         background-color: green;
-                        /* transform: scale(0.95);
-                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
-                     }
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        background-color: green;
+                    }
                 }
             }
-           
         }
     }
-   
 }
 
 @media (max-width: 768px) {
@@ -122,9 +115,7 @@ header{
                         margin-right: initial;
                         font-size: 1rem;
                         padding: 0.2rem;
-                        
                     }
-                  
                 }
             }
         }
@@ -232,7 +223,7 @@ header{
     }
 }
 
-.peliculasAclamadas{
+.peliculasPop{
     width:80%;
     margin: 0 auto;
     text-align: center;
@@ -244,7 +235,7 @@ header{
         font-weight: 700;
         margin-bottom: 40px;
     }
-    .aclamadas{
+    .populares{
         overflow-x: scroll;
         overflow-y: hidden;
         width: 100%;
