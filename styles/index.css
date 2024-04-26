@@ -10,7 +10,7 @@
 }
    
 ::-webkit-scrollbar-thumb {
-    background: green;
+    background:rgb(5, 53, 5);
 }
 
 body{
@@ -23,7 +23,7 @@ section {
 }
 
 header{
-    background-color:green;
+    background-color:rgb(5, 53, 5);
     color:#ffffff;
     height: 11vh;
     position:sticky;
@@ -50,11 +50,11 @@ header{
             padding: 0px 20px;
         }
         .BtnBuscarNav{
-            background-color:rgb(243, 187, 83);
+            background-color:rgb(21, 109, 21);
             height: 2rem;
             color:#000000;
             padding:0 20px;
-            border: 2px solid rgb(243, 187, 83);
+            border: 2px solid rgb(21, 109, 21);
             border-radius: 10px;
             font-size: 1rem;
             font-weight: 500;
@@ -88,7 +88,7 @@ header{
                     border-radius: 5px;
                     transition: transform 0.3s, box-shadow 0.3s;
                     &:hover {
-                        background-color: green;
+                        background-color: rgb(5, 53, 5);
                     }
                 }
             }
@@ -260,7 +260,7 @@ header{
                 height: 95%;
                 object-fit: cover;
                 &:hover{
-                    box-shadow: 0 0 30px #014101cd;
+                    box-shadow: 0 0 30px #002700cd;
                     transform: scale(0.9);
                 }
             }   
@@ -269,7 +269,7 @@ header{
 }
 
 footer {
-    background-color: green;
+    background-color: rgb(5, 53, 5);
     color: black;
     text-align: center;
     padding: 10px 0;
