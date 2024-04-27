@@ -185,7 +185,7 @@ header{
         display: flex;
         transition: transform 0.5s ease;
         img {
-            width: 100vw;
+            width: 100%;
             height: auto;
             max-height: 89vh;
             flex-shrink: 0;
